@@ -1,0 +1,110 @@
+/* Odin Florería - diseño de Iris en blanco. Modo oscuro con el botón 🌙 */
+:root{--bg:#fff;--fg:#111;--mut:#666;--line:#e6e6e6;--soft:#f7f7f7;--ink:#111;--onink:#fff}
+body.dark-mode{--bg:#111;--fg:#f3f3f3;--mut:#aaa;--line:#2c2c2c;--soft:#1b1b1b;--ink:#fff;--onink:#111}
+*{margin:0;padding:0;box-sizing:border-box}
+body{background:var(--bg);color:var(--fg);font-family:'Segoe UI',Arial,sans-serif;min-height:100vh;transition:background .5s,color .5s}
+header{display:flex;align-items:center;justify-content:space-between;padding:1rem 4vw;background:var(--bg);border-bottom:1px solid var(--line);box-shadow:0 2px 16px rgba(0,0,0,.06);position:sticky;top:0;z-index:10;animation:fadeDown 1s}
+@keyframes fadeDown{from{opacity:0;transform:translateY(-40px)}to{opacity:1;transform:none}}
+@keyframes fadeUp{from{opacity:0;transform:translateY(40px)}to{opacity:1;transform:none}}
+.logo1,.logo2{height:56px;width:auto;cursor:pointer;transition:transform .3s}
+.logo1:hover,.logo2:hover{transform:scale(1.08) rotate(-3deg)}
+body.dark-mode .logo1,body.dark-mode .logo2{filter:invert(1)}
+.header-left{display:flex;align-items:center;gap:1.2rem}
+.titulo-tienda{font-size:1.8rem;font-weight:900;letter-spacing:2px;color:var(--fg)}
+.hamburger{display:flex;flex-direction:column;justify-content:center;gap:4px;width:32px;height:32px;cursor:pointer}
+._layer{width:100%;height:4px;background:var(--fg);border-radius:2px}
+.menuppal{position:fixed;top:0;left:-260px;width:240px;height:100vh;background:var(--soft);box-shadow:2px 0 16px rgba(0,0,0,.15);display:flex;flex-direction:column;padding-top:80px;z-index:100;transition:left .3s}
+.menuppal.show{left:0}
+.menuppal ul{list-style:none;display:flex;flex-direction:column;gap:.5rem;width:100%;padding-left:1.2rem}
+.menuppal a{display:block;width:90%;padding:1rem 1.2rem;color:var(--fg);text-decoration:none;font-weight:600;font-size:1.15rem;letter-spacing:1px;border-radius:8px;transition:.2s}
+.menuppal a:hover{background:var(--ink);color:var(--onink);transform:scale(1.04)}
+.close-menu-btn{position:absolute;top:18px;left:18px;background:none;border:none;color:var(--fg);font-size:2rem;cursor:pointer;transition:transform .2s}
+.close-menu-btn:hover{transform:scale(1.2) rotate(-10deg)}
+.modo-oscuro-btn{background:none;border:none;font-size:1.5rem;margin:1.5rem 0 0 1.5rem;cursor:pointer;transition:transform .2s}
+.modo-oscuro-btn:hover{transform:scale(1.2) rotate(-10deg)}
+main{display:flex;flex-direction:column;align-items:center;justify-content:center;min-height:60vh;padding:2rem 2vw}
+section#inicio{display:flex;align-items:center;gap:3rem;background:var(--soft);border:1px solid var(--line);border-radius:24px;box-shadow:0 4px 32px rgba(0,0,0,.08);padding:2rem 3vw;animation:fadeUp 1.2s}
+section#inicio img{width:260px;height:260px;object-fit:cover;border-radius:18px;box-shadow:0 2px 16px rgba(0,0,0,.15);filter:grayscale(1) contrast(1.2);transition:filter .4s,transform .4s}
+section#inicio img:hover{filter:none;transform:scale(1.04) rotate(-2deg)}
+.bloque-inicio{display:flex;flex-direction:column;gap:1rem;animation:fadeUp 1.5s}
+.bloque-inicio h1{font-size:2.2rem;font-weight:800;letter-spacing:1px}
+.bloque-inicio h2{font-size:1.3rem;font-weight:400;color:var(--mut);font-style:italic}
+.boton-negro,.boton.boton-negro{display:inline-block;background:var(--ink);color:var(--onink);border:2px solid var(--ink);border-radius:30px;padding:.6rem 1.4rem;font-weight:700;letter-spacing:1px;text-transform:uppercase;font-size:.9rem;text-decoration:none;cursor:pointer;transition:.2s}
+.boton-negro:hover{background:var(--bg);color:var(--ink);transform:scale(1.05)}
+footer{background:var(--soft);border-top:1px solid var(--line);padding:2rem 0;margin-top:3rem;animation:fadeUp 1s}
+.footer-content{display:flex;align-items:center;gap:2rem;flex-wrap:wrap;max-width:1100px;margin:0 auto;padding:0 1rem}
+.footer-links{display:flex;gap:1.5rem;flex-wrap:wrap;align-items:center}
+.footer-links a{color:var(--mut);text-decoration:none;font-weight:600;transition:color .3s}
+.footer-links a:hover{color:var(--fg);text-decoration:underline}
+.footer-links .soc a{font-size:1.6rem;margin-right:.9rem}
+.pie{color:var(--mut);margin-left:auto;text-align:right;flex:1}
+.pie a{color:var(--mut)}
+/* Servicios */
+.servicios-calzados{width:100%;padding:40px 0}
+.container{max-width:1200px;margin:0 auto;padding:0 24px;text-align:center}
+.titulo-servicios{font-size:2.6rem;font-weight:900;letter-spacing:2px;text-transform:uppercase;border-bottom:3px solid var(--fg);display:inline-block;padding-bottom:8px;margin-bottom:48px}
+.row{display:flex;flex-wrap:wrap;gap:32px;justify-content:center;text-align:left}
+.column{flex:1 1 250px;max-width:270px;min-width:250px}
+.servicio-bloque{background:var(--bg);border:2px solid var(--fg);border-radius:18px;box-shadow:0 6px 24px rgba(0,0,0,.1);overflow:hidden;display:flex;flex-direction:column;height:100%;transition:transform .25s,box-shadow .25s}
+.servicio-bloque:hover{transform:translateY(-10px) scale(1.03);box-shadow:0 12px 36px rgba(0,0,0,.2)}
+.bloque-imagen{height:210px;overflow:hidden;background:var(--soft)}
+.bloque-imagen img{width:100%;height:100%;object-fit:cover;filter:grayscale(100%);transition:filter .3s}
+.servicio-bloque:hover .bloque-imagen img{filter:none}
+.detalle{padding:22px 18px 26px;text-align:center}
+.detalle h3{font-size:1.2rem;text-transform:uppercase;letter-spacing:1px;margin-bottom:12px}
+.detalle p{color:var(--mut);margin-bottom:18px;min-height:70px}
+/* Sobre mí */
+.dev-container{max-width:500px;margin:40px auto 0;background:var(--soft);border:1px solid var(--line);border-radius:18px;box-shadow:0 4px 24px rgba(0,0,0,.08);display:flex;flex-direction:column;align-items:center;padding:2.5rem 2rem;gap:1.5rem}
+.dev-photo img{width:120px;height:120px;object-fit:cover;border-radius:50%;border:4px solid var(--line)}
+.dev-bio{text-align:center}.dev-bio h2{font-size:1.5rem;margin-bottom:.5rem}.dev-bio p{color:var(--mut);line-height:1.6}
+/* Sugerencias */
+.sugerencias-card{background:var(--soft);border:1px solid var(--line);padding:2.5rem 2rem;border-radius:1.2rem;box-shadow:0 4px 24px rgba(0,0,0,.08);width:100%;max-width:420px}
+.sugerencias-card h2{text-align:center;font-size:1.5rem;margin-bottom:1.2rem}
+.input-group{display:flex;flex-direction:column;gap:.4rem;margin-bottom:1rem}
+.input-group label{color:var(--mut)}
+.input-group input,.input-group textarea{background:var(--bg);color:var(--fg);border:1px solid var(--line);border-radius:.5rem;padding:.75rem 1rem;font:inherit;outline:none}
+.input-group input:focus,.input-group textarea:focus{border-color:var(--fg)}
+.input-group textarea{min-height:90px;resize:vertical}
+.btn-enviar{width:100%;padding:.9rem;background:var(--ink);color:var(--onink);border:2px solid var(--ink);border-radius:.7rem;font-size:1.1rem;font-weight:600;cursor:pointer;transition:.2s}
+.btn-enviar:hover{background:var(--bg);color:var(--ink)}
+#msg{margin-top:1rem;text-align:center;font-weight:600}
+/* Galerías */
+.galeria-botones{display:flex;gap:1rem;margin-bottom:1.5rem}
+.gallery{display:flex;gap:16px;flex-wrap:wrap;justify-content:center;margin:30px 0}
+.thumb img{width:190px;height:130px;object-fit:cover;cursor:pointer;border-radius:8px;transition:transform .2s}
+.gallery-masonry{column-count:4;column-gap:16px;max-width:1200px;margin:30px auto}
+.gallery-masonry .thumb{break-inside:avoid;margin-bottom:16px}
+.gallery-masonry .thumb img{width:100%;height:auto;display:block}
+.thumb img:hover{transform:scale(1.05);box-shadow:0 2px 8px rgba(0,0,0,.25)}
+.modal{display:none;position:fixed;z-index:1000;padding-top:60px;inset:0;overflow:auto;background:rgba(0,0,0,.85)}
+.modal-content{display:block;margin:auto;max-width:80%;max-height:80vh;border-radius:8px}
+.close{position:absolute;top:30px;right:40px;color:#fff;font-size:40px;font-weight:bold;cursor:pointer}
+#caption{text-align:center;color:#fff;margin-top:10px}
+@media(max-width:1000px){.gallery-masonry{column-count:2}}
+@media(max-width:900px){section#inicio{flex-direction:column;gap:1.5rem;padding:1.5rem 3vw}.titulo-tienda{font-size:1.4rem}.logo1,.logo2{height:44px}.column{max-width:400px;width:100%}.row{flex-direction:column;align-items:center}}
+@media(max-width:700px){.footer-content{flex-direction:column;align-items:flex-start}.pie{text-align:left;margin-left:0}.gallery-masonry{column-count:1}}
+@media(max-width:600px){section#inicio img{width:90vw;height:180px}.titulo-servicios{font-size:1.8rem}}
+/* Privacidad */
+.privacidad{max-width:720px;width:100%;background:var(--soft);border:1px solid var(--line);border-radius:18px;box-shadow:0 4px 24px rgba(0,0,0,.08);padding:2.5rem 2rem;animation:fadeUp 1s}
+.privacidad h2{font-size:1.8rem;margin-bottom:.3rem}.privacidad .fecha{color:var(--mut);font-size:.9rem;margin-bottom:1.5rem}
+.privacidad h3{margin:1.4rem 0 .4rem;font-size:1.1rem}.privacidad p{color:var(--mut);line-height:1.7}.privacidad a{color:var(--fg)}
+/* Nosotros, Preguntas frecuentes, Noticias y blog */
+.nosotros,.faq,.blog{max-width:860px;width:100%;background:var(--soft);border:1px solid var(--line);border-radius:18px;box-shadow:0 4px 24px rgba(0,0,0,.08);padding:2.5rem 2rem;animation:fadeUp 1s}
+.nosotros h2,.faq h2,.blog h2{font-size:1.8rem;margin-bottom:1.2rem}
+.nosotros p,.faq p,.blog p{color:var(--mut);line-height:1.7}
+.nosotros a:not(.boton),.faq a,.blog a{color:var(--fg)}
+.nosotros-fila,.post{display:flex;gap:1.5rem;align-items:center}
+.nosotros-fila img,.post img{width:240px;height:240px;object-fit:cover;border-radius:14px;flex-shrink:0}
+.nosotros-fila p+p,.post p+p{margin-top:.8rem}
+.nosotros-datos{display:flex;gap:1.5rem;flex-wrap:wrap;margin:2rem 0}
+.nosotros-datos div{flex:1 1 200px}
+.nosotros h3,.post h3{font-size:1.1rem;margin-bottom:.4rem}
+.faq details{border-top:1px solid var(--line);padding:1rem 0}
+.faq details:last-of-type{border-bottom:1px solid var(--line)}
+.faq summary{cursor:pointer;font-weight:600;font-size:1.05rem}
+.faq details p{margin-top:.6rem}
+.faq-pie{margin-top:1.5rem}
+.post{padding:1.5rem 0;border-top:1px solid var(--line)}
+.post:first-of-type{border-top:none;padding-top:0}
+.fecha-post{font-size:.85rem;margin-bottom:.6rem}
+@media(max-width:700px){.nosotros-fila,.post{flex-direction:column;align-items:flex-start}.nosotros-fila img,.post img{width:100%}}
