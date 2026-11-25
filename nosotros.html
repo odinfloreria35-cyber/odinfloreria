@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="img/logo.png"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <title>Nosotros | Odin Florería</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+<header id="header">
+    <div class="header-left">
+        <div class="hamburger" id="hamburger" onclick="toggleMenu()">
+            <div class="_layer -top"></div>
+            <div class="_layer -mid"></div>
+            <div class="_layer -bottom"></div>
+        </div>
+        <span class="titulo-tienda">Odin Florería</span>
+    </div>
+    <nav class="menuppal" id="menuppal">
+        <button class="close-menu-btn" onclick="toggleMenu()" aria-label="Cerrar menú">&times;</button>
+        <ul>
+            <li><a href="galeria-simple.html">Galeria</a></li>
+            <li><a href="servicios.html">Servicios</a></li>
+            <li><a href="nosotros.html">Nosotros</a></li>
+            <li><a href="sugerencias.html">Realice sugerencias</a></li>
+            <li><a href="sobre mi.html">Sobre mi</a></li>
+            <li><a href="noticias.html">Noticias y blog</a></li>
+            <li><a href="preguntas-frecuentes.html">Preguntas frecuentes</a></li>
+        </ul>
+        <button class="modo-oscuro-btn" id="modoOscuroBtn" onclick="toggleDarkMode()">🌙</button>
+    </nav>
+    <img src="img/logo.png" alt="Odin Arte Floral" class="logo1" onclick="window.location.href='index.html'">
+</header>
+<main id="main">
+    <section class="nosotros">
+        <h2>Quiénes somos</h2>
+        <div class="nosotros-fila">
+            <img src="img/bouquet.jpeg" alt="Ramo de flores rosadas y blancas de Odin Florería">
+            <div>
+                <p>Odin Florería es un taller de arte floral pensado para tus momentos especiales: cumpleaños, aniversarios, declaraciones de amor y también despedidas.</p>
+                <p>Trabajamos con flores frescas y cuidamos cada detalle del diseño. Tú nos cuentas la idea y nosotros la hacemos realidad.</p>
+            </div>
+        </div>
+        <div class="nosotros-datos">
+            <div><h3>Qué hacemos</h3><p>Ramos, cajas con flores, arreglos de mesa con florero y coronas fúnebres. <a href="servicios.html">Ver servicios</a></p></div>
+            <div><h3>Cómo trabajamos</h3><p>Cada pedido se conversa contigo: ocasión, estilo, colores y fecha. Confirmamos el arreglo antes de prepararlo.</p></div>
+            <div><h3>Quién está detrás</h3><p>Odin nace del trabajo de Ayelen Delvalle, florista y estudiante de Ingeniería Informática. <a href="sobre mi.html">Conocer más</a></p></div>
+        </div>
+        <a href="https://wa.me/595992909892" target="_blank" rel="noopener" class="boton boton-negro">Escríbenos por WhatsApp</a>
+    </section>
+</main>
+<footer id="footer">
+    <div class="footer-content">
+        <img src="img/logo.png" alt="Odin Arte Floral" class="logo2" onclick="window.location.href='index.html'">
+        <div class="footer-links"><a href="servicios.html">Servicios</a><a href="preguntas-frecuentes.html">Preguntas frecuentes</a><span class="soc"><a href="https://wa.me/595992909892" target="_blank" rel="noopener" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a><a href="https://www.instagram.com/floreria_odin" target="_blank" rel="noopener" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a><a href="https://www.facebook.com/share/1G2qSZMMpe/" target="_blank" rel="noopener" aria-label="Facebook"><i class="fa-brands fa-facebook"></i></a></span><a href="mailto:odinfloreria35@gmail.com">Contacto</a><a href="privacidad.html">Privacidad</a></div>
+        <p class="pie" id="pie"><a href="mailto:odinfloreria35@gmail.com">odinfloreria35@gmail.com</a>&nbsp;|&nbsp;Contacto: 0992 909 892<br>&copy; Odin Florería</p>
+    </div>
+</footer>
+<script src="js/app.js"></script></body>
+</html>
